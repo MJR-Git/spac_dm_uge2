@@ -50,12 +50,12 @@ def char_count(list):
 def sort_dict(dict):
     sorted_list = []
     for char in dict:
-        sorted_list.append({"char" : char, "num" : dict[char]})
+        sorted_list.append({"char" : char, "count" : dict[char]})
     
     sorted_list = sorted(sorted_list, reverse=True, key=lambda x: x["num"])
     sorted_dict = {}
     for i in sorted_list:
-        sorted_dict[i["char"]] = i["num"]
+        sorted_dict[i["char"]] = i["count"]
     return sorted_dict
 
 if __name__ == "__main__":
