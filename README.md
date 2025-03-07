@@ -17,7 +17,7 @@ All code was put inside a "main()" function and called via
 if __name__ == "__main__":
      main()
 
-- [plot](#data/house_purchase_plot.png)
+- [plot](#../house_purchase_plot.png)
 
 
 ### Data Sources
