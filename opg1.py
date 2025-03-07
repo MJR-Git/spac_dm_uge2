@@ -52,7 +52,7 @@ def sort_dict(dict):
     for char in dict:
         sorted_list.append({"char" : char, "count" : dict[char]})
     
-    sorted_list = sorted(sorted_list, reverse=True, key=lambda x: x["num"])
+    sorted_list = sorted(sorted_list, reverse=True, key=lambda x: x["char"])
     sorted_dict = {}
     for i in sorted_list:
         sorted_dict[i["char"]] = i["count"]

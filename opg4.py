@@ -25,10 +25,19 @@ def get_data(path):
         return df
 
 def get_plot(data):
-    house_purchase_plot = sns.countplot(x="region", hue="house_type", data=data)
-    plt.ylabel("purchases")
-    fig = house_purchase_plot.get_figure()
-    fig.savefig("house_purchase_plot.png")
+    sns.set_theme(rc={'figure.figsize':(12,10)})
+    fig, axes = plt.subplots(1, 2)
+
+ 
+
+    sns.countplot(x="region", hue="house_type", data=data, ax=axes[0])
+
+    df_subset = data.query("year_build > 1800")
+    df_subset = df_subset.drop_duplicates(subset=["house_id"])
+    sns.histplot(x="year_build", hue="region", data=df_subset, ax=axes[1])
+
+    fig1 = fig.get_figure()
+    fig1.savefig("house_purchases_plot.png")
     return
 
 if __name__ == "__main__":

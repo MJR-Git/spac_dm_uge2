@@ -12,8 +12,6 @@ def main():
          print(e)
     except Exception as e:
          print(e)
-    else:
-         print("New copy not created")
 
 def get_file_format(path):
     valid_formats = ("txt", "csv")
@@ -27,7 +25,7 @@ def get_content(path):
 
 def create_file(file, file_format):
     with open(f"new_file.{file_format}", "w") as nf:
-            f.write(file)
+            nf.write(file)
     return nf
     
 if __name__ == "__main__":
