@@ -15,7 +15,7 @@
 
 
 ### Project Overview
-[plot](#house_purchase_plot.png)
+[plot](#/house_purchase_plot.png)
 
 
 ### Data Sources
