@@ -11,7 +11,6 @@ def main():
     except Exception as e:
          print(e)
 
-
 def get_data(path):
     with open(path) as f: 
         return f.read()

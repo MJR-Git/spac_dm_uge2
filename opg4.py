@@ -8,11 +8,11 @@ def main():
     
     print(df.head(10))
 
-    df_subset = df[["house_type", "region", "purchase_price"]]
+    df_subset = df[["house_type", "region"]]
 
-    group_by_purchase_price = df_subset.groupby(["region", "purchase_price"]).mean()
+    #group_by_purchase_price = df_subset.groupby(["region", "purchase_price"]).mean()
     group_by_purchases = df_subset.groupby(["house_type", "region"]).value_counts()
-    print(group_by_purchase_price)
+    #print(group_by_purchase_price)
     print(group_by_purchases)
     get_plot(df)
 
